@@ -1,10 +1,9 @@
 function titleCaseEdit(title) {
-    const splitString = title.split(' ');
-    let newTitle = splitString[0].charAt(0).toUpperCase() + splitString[0].substring(1);
-    for (let i = 1; i < splitString.length; i++) {
-        newTitle += " " + splitString[i].charAt(0).toUpperCase() + splitString[i].substring(1);
-    }
-    return newTitle;
+    let splitString = title.split(' ');
+    splitString = splitString.map((name) => {
+        return name[0].toUpperCase() + name.slice(1);
+    })
+    return splitString.join(" ");
 }
 // Do not edit this line;
 module.exports = titleCaseEdit;
