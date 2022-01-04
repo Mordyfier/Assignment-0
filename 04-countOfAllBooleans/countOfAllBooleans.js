@@ -1,7 +1,7 @@
 function countOfAllBooleans(arr) {
   let count = 0;
   arr.forEach(x => {
-    if (x === true || x === false) {
+    if (typeof(x) === 'boolean') {
       count++;
     }
   });
